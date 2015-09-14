@@ -12,7 +12,7 @@ namespace SEOCheckerCacheRefresher
         [HttpGet]
         public bool RefreshAll()
         {
-            //this is just a test, this should be executed when the thing happens that should trigger the event
+            //Trigger the SeoCheckerCacheRefresher, ideally this would come from the save event in SEO Checker
             DistributedCache.Instance.RefreshAll(Guid.Parse(SeoCheckerCacheRefresher.SeoCheckerCacheRefresherId), true);
             return true;
         }
