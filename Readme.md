@@ -6,4 +6,6 @@ The solution was to create a custom `ICacheRefresher` so that a event can be sub
 
 As SEO Checker doesn't have any event hooks for now I added a button in a custom dashboard to trigger the distributed call.
 
+![](https://raw.githubusercontent.com/Jeavon/SEOCheckerCacheRefresher/master/docs/images/CustomButtons.PNG)
+
 Umbraco login for the test site is u:admin, p:password
