@@ -1,5 +1,6 @@
 ﻿using Umbraco.Core;
 using Umbraco.Core.Cache;
+using Umbraco.Core.Logging;
 
 namespace SEOCheckerCacheRefresher
 {
@@ -14,6 +15,7 @@ namespace SEOCheckerCacheRefresher
         {
             // clear SEO checker cache, this will executed on all servers
             SEOChecker.Core.Helpers.Caching.ClearCache(true);
+            LogHelper.Info<SeoCheckerCacheEvents>("SEO Checker cache cleared by ICacheRefresher Event");
         }
     }
 }
